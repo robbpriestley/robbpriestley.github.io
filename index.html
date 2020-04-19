@@ -14,10 +14,6 @@
 	<link rel='stylesheet' id='wp-block-library-css'
 		href='https://robbpriestley.github.io/wp-includes/css/dist/block-library/style.min.css?ver=5.3.2' type='text/css'
 		media='all' />
-	<link rel='stylesheet' id='google-font-lato-css'
-		href='https//fonts.googleapis.com/css?family=Lato%3A300%2C700&#038;ver=1.0.2' type='text/css' media='all' />
-	<link rel='stylesheet' id='dashicons-css'
-		href='https://robbpriestley.github.io/wp-includes/css/dashicons.min.css?ver=5.3.2' type='text/css' media='all' />
 	<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
 	<script src="https://code.jquery.com/jquery-migrate-1.4.0.min.js" integrity="sha256-nxdiQ4FdTm28eUNNQIJz5JodTMCF5/l32g5LwfUwZUo=" crossorigin="anonymous"></script>
 	<meta itemprop="name" content="Digital Wizardry Software Solutions" />
@@ -52,23 +48,44 @@
 						<div class="widget-wrap">
 							<nav class="nav-header" itemscope itemtype="http://schema.org/SiteNavigationElement">
 								<ul id="menu-header-navigation" class="menu genesis-nav-menu">
-									<li id="menu-item-43"
-										class="menu-item menu-item-type-custom menu-item-object-custom menu-item-43"><a
-											href="#top" data-ps2id-api="true" itemprop="url"><span
-												itemprop="name">Home</span></a></li>
-									<li id="menu-item-44"
-										class="menu-item menu-item-type-custom menu-item-object-custom menu-item-44"><a
-											href="#services" data-ps2id-api="true" itemprop="url"><span
-												itemprop="name">Services</span></a></li>
-									<li id="menu-item-45"
-										class="menu-item menu-item-type-custom menu-item-object-custom menu-item-45"><a
-											href="#about" data-ps2id-api="true" itemprop="url"><span
-												itemprop="name">About Me</span></a></li>
-									<li id="menu-item-46"
-										class="menu-item menu-item-type-custom menu-item-object-custom menu-item-46"><a
-											href="#contact" data-ps2id-api="true" itemprop="url"><span
-												itemprop="name">Contact</span></a></li>
+									<li id="menu-item-top"
+										class="menu-item menu-item-type-custom menu-item-object-custom">
+										<a id="menu-item-top-a" href="#top" data-ps2id-api="true" itemprop="url">
+											<span itemprop="name">Home</span>
+										</a>
+									</li>
+									<li id="menu-item-services"
+										class="menu-item menu-item-type-custom menu-item-object-custom">
+										<a id="menu-item-services-a" href="#services" data-ps2id-api="true" itemprop="url">
+											<span itemprop="name">Services</span>
+										</a>
+									</li>
+									<li id="menu-item-about" class="menu-item menu-item-type-custom menu-item-object-custom">
+										<a id="menu-item-about-a" href="#about" data-ps2id-api="true" itemprop="url">
+											<span itemprop="name">About Me</span>
+										</a>
+									</li>
+									<li id="menu-item-contact" class="menu-item menu-item-type-custom menu-item-object-custom">
+										<a id="menu-item-contact-a" href="#contact" data-ps2id-api="true" itemprop="url">
+											<span itemprop="name">Contact</span>
+										</a>
+									</li>
 								</ul>
+								<script>
+									// Attempt to deal with annoying PageScroll2Id bug...
+									$('#menu-item-contact-a').click(function() {
+										setTimeout(function () {
+											$('#menu-item-top-a').removeClass('mPS2id-clicked');
+											$('#menu-item-top-a').removeClass('mPS2id-highlight');
+											$('#menu-item-services-a').removeClass('mPS2id-clicked');
+											$('#menu-item-services-a').removeClass('mPS2id-highlight');
+											$('#menu-item-about-a').removeClass('mPS2id-clicked');
+											$('#menu-item-about-a').removeClass('mPS2id-highlight');
+											$('#menu-item-contact-a').addClass('mPS2id-clicked');
+											$('#menu-item-contact-a').addClass('mPS2id-highlight');
+										}, 2000);
+									});
+								</script>
 							</nav>
 						</div>
 					</section>
@@ -89,10 +106,7 @@
 											</div>
 										</h2>
 										<div class="textwidget">
-											<img class="profile textwrap"
-												src="https://robbpriestley.github.io/images/profile.jpg"
-												data-pagespeed-url-hash="1747032555"
-												onload="pagespeed.CriticalImages.checkImageForCriticality(this);" />
+											<img class="profile textwrap" src="https://robbpriestley.github.io/images/profile.jpg"/>
 											<div class="txt">Welcome! I'm Robb Priestley, a freelance software
 												developer, consultant, and professional problem solver based in
 												Chemainus, British Columbia. Digital Wizardry is my software solutions
@@ -124,45 +138,27 @@
 											<div class="services-container">
 												<div class="services-wrappper">
 													<div class="services-item-block">
-														<img class="icon"
-															src="https://robbpriestley.github.io/images/icons/Code-96.png"
-															data-pagespeed-url-hash="3846036942"
-															onload="pagespeed.CriticalImages.checkImageForCriticality(this);" />
+														<img class="icon" src="https://robbpriestley.github.io/images/icons/Code-96.png" />
 														<div>Software Development</div>
 													</div>
 													<div class="services-item-block">
-														<img class="icon"
-															src="https://robbpriestley.github.io/images/icons/Data Sheet-96.png"
-															data-pagespeed-url-hash="2513694189"
-															onload="pagespeed.CriticalImages.checkImageForCriticality(this);" />
+														<img class="icon" src="https://robbpriestley.github.io/images/icons/Data Sheet-96.png" />
 														<div>Data & Information</div>
 													</div>
 													<div class="services-item-block">
-														<img class="icon"
-															src="https://robbpriestley.github.io/images/icons/Mind Map-96.png"
-															data-pagespeed-url-hash="3219166424"
-															onload="pagespeed.CriticalImages.checkImageForCriticality(this);" />
+														<img class="icon" src="https://robbpriestley.github.io/images/icons/Mind Map-96.png" />
 														<div>Systems & Integrations</div>
 													</div>
 													<div class="services-item-block">
-														<img class="icon"
-															src="https://robbpriestley.github.io/images/icons/Cloud Storage-96.png"
-															data-pagespeed-url-hash="901133474"
-															onload="pagespeed.CriticalImages.checkImageForCriticality(this);" />
+														<img class="icon" src="https://robbpriestley.github.io/images/icons/Cloud Storage-96.png" />
 														<div>Cloud Infrastructure</div>
 													</div>
 													<div class="services-item-block">
-														<img class="icon"
-															src="https://robbpriestley.github.io/images/icons/Accounting-96.png"
-															data-pagespeed-url-hash="3363955534"
-															onload="pagespeed.CriticalImages.checkImageForCriticality(this);" />
+														<img class="icon" src="https://robbpriestley.github.io/images/icons/Accounting-96.png" />
 														<div>Business Analysis</div>
 													</div>
 													<div class="services-item-block">
-														<img class="icon"
-															src="https://robbpriestley.github.io/images/icons/To Do-96.png"
-															data-pagespeed-url-hash="755660204"
-															onload="pagespeed.CriticalImages.checkImageForCriticality(this);" />
+														<img class="icon" src="https://robbpriestley.github.io/images/icons/To Do-96.png" />
 														<div>Project Management</div>
 													</div>
 												</div>
@@ -229,54 +225,35 @@
 													rel="noopener noreferrer"><img
 														src="https://static.licdn.com/scds/common/u/img/webpromo/btn_myprofile_160x33.png"
 														width="160" height="33" border="0"
-														alt="View Robb Priestley, PMP's profile on LinkedIn"
-														data-pagespeed-url-hash="1708355114"
-														onload="pagespeed.CriticalImages.checkImageForCriticality(this);"></a>
+														alt="View Robb Priestley, PMP's profile on LinkedIn">
+												</a>
 											</div>
 											<div class="contentBlock">
 												<div class="contentHeader">My Values:</div>
 												<div class="services-container">
 													<div class="services-wrappper">
 														<div class="services-item-block">
-															<img class="icon"
-																src="https://robbpriestley.github.io/images/icons/Goal-96.png"
-																data-pagespeed-url-hash="2032444380"
-																onload="pagespeed.CriticalImages.checkImageForCriticality(this);" />
+															<img class="icon" src="https://robbpriestley.github.io/images/icons/Goal-96.png" />
 															<div>Business Focus</div>
 														</div>
 														<div class="services-item-block">
-															<img class="icon"
-																src="https://robbpriestley.github.io/images/icons/Medal First Place-96.png"
-																data-pagespeed-url-hash="2932203827"
-																onload="pagespeed.CriticalImages.checkImageForCriticality(this);" />
+															<img class="icon" src="https://robbpriestley.github.io/images/icons/Medal First Place-96.png" />
 															<div>Professionalism</div>
 														</div>
 														<div class="services-item-block">
-															<img class="icon"
-																src="https://robbpriestley.github.io/images/icons/FAQ-80.png"
-																data-pagespeed-url-hash="1162758852"
-																onload="pagespeed.CriticalImages.checkImageForCriticality(this);" />
+															<img class="icon" src="https://robbpriestley.github.io/images/icons/FAQ-80.png" />
 															<div>Clear Communication</div>
 														</div>
 														<div class="services-item-block">
-															<img class="icon"
-																src="https://robbpriestley.github.io/images/icons/Lock 2-104.png"
-																data-pagespeed-url-hash="3701645951"
-																onload="pagespeed.CriticalImages.checkImageForCriticality(this);" />
+															<img class="icon" src="https://robbpriestley.github.io/images/icons/Lock 2-104.png" />
 															<div>Integrity</div>
 														</div>
 														<div class="services-item-block">
-															<img class="icon"
-																src="https://robbpriestley.github.io/images/icons/Innovation-96.png"
-																data-pagespeed-url-hash="3370285122"
-																onload="pagespeed.CriticalImages.checkImageForCriticality(this);" />
+															<img class="icon" src="https://robbpriestley.github.io/images/icons/Innovation-96.png" />
 															<div>Innovation</div>
 														</div>
 														<div class="services-item-block">
-															<img class="icon"
-																src="https://robbpriestley.github.io/images/icons/Globe-96.png"
-																data-pagespeed-url-hash="2153252078"
-																onload="pagespeed.CriticalImages.checkImageForCriticality(this);" />
+															<img class="icon" src="https://robbpriestley.github.io/images/icons/Globe-96.png" />
 															<div>Real-World Results</div>
 														</div>
 													</div>
