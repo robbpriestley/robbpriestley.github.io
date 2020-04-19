@@ -1732,19 +1732,19 @@ Media Queries
 }
 
 section#welcome {
-	background-image: url(images/welcome-background.jpg);
+	background-image: url(https://robbpriestley.github.io/images/welcome-background.jpg);
 }
 
 section#services {
-	background-image: url(images/services-background.jpg);
+	background-image: url(https://robbpriestley.github.io/images/services-background.jpg);
 }
 
 section#about {
-	background-image: url(images/about-background.jpg);
+	background-image: url(https://robbpriestley.github.io/images/about-background.jpg);
 }
 
 section#contact {
-	background-image: url(images/contact-background.jpg);
+	background-image: url(https://robbpriestley.github.io/images/contact-background.jpg);
 }
 
 #dynamic-to-top {
